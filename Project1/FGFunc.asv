@@ -1,0 +1,17 @@
+function [r,v] = FGFunc(r0,v0,dt,mu)
+    [a,e,I,RAAN,AOP,f0] = RV2OE(r0,v0,mu);
+    n = sqrt(mu/a^3);
+    E0 = 2*atan(sqrt((1-e)/(1+e))*tan(f0/2));
+    M0 = E0 - e*sin(E0);
+    M1 = M0 + n*dt;
+    E1 = NR(e,M1);
+    f1 = 2*atan(sqrt((1+e)/(1-e))*tan(E1/2));
+    F = 1 - a/norm(r0)*(1-cos(E1-E0));
+    G = dt - 1/n*((E1-E0) - sin(E-E0));
+    
+    Fdot =
+    
+
+
+
+end

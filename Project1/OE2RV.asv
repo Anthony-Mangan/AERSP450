@@ -1,0 +1,15 @@
+function [r,v] = OE2RV(a,e,I,RAAN,AOP,f,mu)
+p = a(1-e^2);
+h = sqrt(mu*p);
+rnorm = p/(1 + e*cos(f));
+vnorm = sqrt((2*mu/rnorm)-mu/a);
+rvecEPH = [rnorm*cos(f),rnorm*sin(f),0];
+vvecEPH = [rnorm*cos(f),rnorm*sin(f),0];
+
+
+
+
+
+
+
+end
